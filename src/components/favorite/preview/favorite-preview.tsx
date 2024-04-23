@@ -12,8 +12,7 @@ interface IProps {
 }
 
 const FavoritePreview = ({town, hotels}: IProps) => {
-  // eslint-disable-next-line no-console
-  console.log(hotels);
+
   const dispatch = useAppDispatch();
 
   const changeFavoriteStatusHandler = (id: number, isFavorite: boolean) => {

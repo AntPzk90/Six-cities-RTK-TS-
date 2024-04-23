@@ -56,8 +56,6 @@ export const userSlice = createSlice({
         localStorage.removeItem('user-token');
       })
       .addCase(checkUserAsync.fulfilled, (state, action) => {
-        // eslint-disable-next-line no-console
-        console.log(action.payload);
         if (action.payload.status === 401) {
           state.user = null;
         } else {
